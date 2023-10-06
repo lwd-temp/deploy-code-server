@@ -1,7 +1,4 @@
 {
-  "workbench.colorTheme": "Default Dark+",
-  "git.postCommitCommand": "sync",
-  "git.enableSmartCommit": true,
-  "git.confirmSync": false,
-  "git.autofetch": true
+  "telemetry.enableTelemetry": false,
+  "telemetry.telemetryLevel": "off"
 }

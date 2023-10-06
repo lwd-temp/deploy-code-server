@@ -1,5 +1,5 @@
 # Start from the code-server Debian base image
-FROM codercom/code-server:4.9.0
+FROM codercom/code-server:4.17.1
 
 USER coder
 
@@ -28,6 +28,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
+RUN sudo apt-get install -y python3-pip
 
 # Copy files: 
 # COPY deploy-container/myTool /home/coder/myTool
@@ -35,7 +36,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # -----------
 
 # Port
-ENV PORT=8080
+ENV PORT=8084
 
 # Use our custom entrypoint script first
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
